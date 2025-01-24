@@ -25,25 +25,33 @@ int main () {
 
 
 
-#include <stdio.h>
-#include <math.h>
 
 
+float sphere_volume(float r){
+    return ((4.0/3.0) * M_PI * (r*r*r));
+}
 
 int main() {
-    float R, V;
+    float r;
 
 
     printf("Podaj promien kuli: ");
-    scanf("%f", &R);
-
-    V = (4.0/3.0) * 3.14 * pow(R, 3);
+    scanf("%f", &r);
 
 
-    printf("Objetosc kuli o promieniu %.2f wynosi: %.2f\n", R, V);
+
+    printf("Objetosc kuli wynosi: %.2f\n", sphere_volume(r));
 
     return 0;
 }
+
+
+
+
+
+
+
+
 
 
 
